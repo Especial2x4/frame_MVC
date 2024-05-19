@@ -1,6 +1,8 @@
 
 <?php
 
-echo "HOLA MUNDO";
+// Carga el iniciador
+require_once "app/iniciador.php";
+
 
 ?>
