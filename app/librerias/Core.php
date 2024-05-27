@@ -30,6 +30,19 @@
             //require_once 'C:/xampp/htdocs/frame_MVC/app/controladores/' . $this->controladorActual . '.php'; funciona
             require_once 'app/controladores/' . $this->controladorActual . '.php';
             $this->controladorActual = new $this->controladorActual; // Es importante
+
+            // Verificar la segunda parte de la url que corresponde al índice 1 del array y hace referencia al método del controlador
+
+            if(isset($url[1])){
+
+                if(method_exists($this->controladorActual, $url[1])){
+
+                    $this->metodoActual = $url[1];
+                    unset($url[1]);
+                }
+            }
+
+            echo $this->metodoActual;
             
             
 
@@ -46,6 +59,9 @@
                 $url = explode('/', $url);
 
                 return $url; // todo el código anterior devuelve la url trozada en una especie de array
+            }else{
+
+                return $url[0] = $this->controladorActual; // en caso de que no se tipé una url, por defecto seteará el controlador por defecto en el primer índice del array
             }
         }
 
