@@ -42,7 +42,15 @@
                 }
             }
 
-            echo $this->metodoActual;
+            // Para probar el método que se está ejecutando
+            //echo $this->metodoActual;
+
+            // Obtener los posibles parámetros
+            $this->parametros = $url ? array_values($url) : [];
+
+            // Llamar callbacks
+            call_user_func_array([$this->controladorActual, $this->metodoActual], $this->parametros);
+
             
             
 

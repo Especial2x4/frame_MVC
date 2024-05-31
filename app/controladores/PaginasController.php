@@ -13,6 +13,13 @@ class PaginasController {
 
     }
 
+    // Método de ejemplo
+    public function actualizarArticulo($idArticulo){
+
+        echo $idArticulo;
+
+    }
+
 
 
 
