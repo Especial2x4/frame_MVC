@@ -1,10 +1,16 @@
 <?php
 
-class PaginasController {
+class PaginasController extends Controlador {
 
     function __construct (){
         
-        echo "Controlador páginas cargado";
+        //echo "Controlador páginas cargado";
+    }
+
+    // Método de ejemplo
+    public function index(){
+
+        $this->cargarVista("paginas/inicio");
     }
 
     // Método de ejemplo

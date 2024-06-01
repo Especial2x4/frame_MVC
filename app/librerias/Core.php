@@ -32,7 +32,7 @@
             $this->controladorActual = new $this->controladorActual; // Es importante
 
             // Verificar la segunda parte de la url que corresponde al índice 1 del array y hace referencia al método del controlador
-
+            
             if(isset($url[1])){
 
                 if(method_exists($this->controladorActual, $url[1])){
@@ -41,12 +41,13 @@
                     unset($url[1]);
                 }
             }
-
+            
             // Para probar el método que se está ejecutando
             //echo $this->metodoActual;
 
             // Obtener los posibles parámetros
             $this->parametros = $url ? array_values($url) : [];
+            
 
             // Llamar callbacks
             call_user_func_array([$this->controladorActual, $this->metodoActual], $this->parametros);
@@ -69,7 +70,7 @@
                 return $url; // todo el código anterior devuelve la url trozada en una especie de array
             }else{
 
-                return $url[0] = $this->controladorActual; // en caso de que no se tipé una url, por defecto seteará el controlador por defecto en el primer índice del array
+                return $url = [$this->controladorActual,$this->metodoActual]; // en caso de que no se tipé una url, por defecto seteará el controlador por defecto en el primer índice del array
             }
         }
 
