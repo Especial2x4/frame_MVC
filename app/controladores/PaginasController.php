@@ -21,7 +21,11 @@ class PaginasController extends Controlador {
     // Método de ejemplo
     public function getArticulos(){
 
-        $this->cargarVista("paginas/articulos");
+        $datos_asoc = [
+            'description'=> 'acá iria el mapeo de los datos traidos de la Database'
+        ];
+
+        $this->cargarVista("paginas/articulos", $datos_asoc);
     }
 
     // Método de ejemplo
