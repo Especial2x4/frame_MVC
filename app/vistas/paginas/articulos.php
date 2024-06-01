@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,8 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Prueba de carga desde la vista Inicio</h1>
-    <p><?php echo $datos['titulo']?></p>
+    <h1>Prueba de carga desde la vista Articulos</h1>
+    
 </body>
 </html>
-

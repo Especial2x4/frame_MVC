@@ -10,13 +10,18 @@ class PaginasController extends Controlador {
     // Método de ejemplo
     public function index(){
 
-        $this->cargarVista("paginas/inicio");
+        // prueba de pasar datos desde el controlador a la vista más adelante será útil para traer desde la base de datos hacia la vista
+        $datos_asoc = [
+            'titulo' => 'El mejor del siglo'
+        ];
+
+        $this->cargarVista("paginas/inicio", $datos_asoc);
     }
 
     // Método de ejemplo
     public function getArticulos(){
 
-
+        $this->cargarVista("paginas/articulos");
     }
 
     // Método de ejemplo
