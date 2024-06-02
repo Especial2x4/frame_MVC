@@ -22,7 +22,7 @@ class PaginasController extends Controlador {
     public function getArticulos(){
 
         $datos_asoc = [
-            'description'=> 'acá iria el mapeo de los datos traidos de la Database'
+            'description'=> 'Acá iria el mapeo de los datos traidos desde la Database'
         ];
 
         $this->cargarVista("paginas/articulos", $datos_asoc);
