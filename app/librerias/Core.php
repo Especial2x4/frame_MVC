@@ -35,15 +35,15 @@
             
             if(isset($url[1])){
 
-                if(method_exists($this->controladorActual, $url[1])){
+                if(method_exists($this->controladorActual, ucwords($url[1]))){
 
-                    $this->metodoActual = $url[1];
+                    $this->metodoActual = ucwords($url[1]);
                     unset($url[1]);
                 }
             }
             
             // Para probar el método que se está ejecutando
-            //echo $this->metodoActual;
+            echo $this->metodoActual;
 
             // Obtener los posibles parámetros
             $this->parametros = $url ? array_values($url) : [];
